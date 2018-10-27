@@ -6,17 +6,28 @@ const READLINE = require("readline-sync");
 // R-rated movie.
 console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
-let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
-
-
-// **** Problem 2: Umbrella ****
+let withAdult = true;
+ if (age >= 18 || withAdult){
+ 	console.log("Watch movie")
+ }else{
+ 	console.log("you need an adult")
+ }
 // You should bring an umbrella when you travel, but only if it is raining.
 // However, if it is thunderstorming, you should not bring an umbrella since
 // that's bad luck. Write code that prints if someone should bring an umbrella
 // with them.
 console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
-let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
+let thunderstorming = READLINE.question("Is it thunderstorming: ")
+if (raining == "yes " && thunderstorming == "no"){
+	console.log(" grab umbrella")
+	}
+else{
+	console.log("  don't Grab umbrella")
+}
+
+
+
 
 
 // **** Problem 3: Monkey Trouble ****
@@ -36,8 +47,6 @@ let score1 = READLINE.question("Enter the first score: ");
 let score2 = READLINE.question("Enter the second score: ");
 let score3 = READLINE.question("Enter the third score: ");
 
-
-// **** Problem 5: Phone Shopping ****
 // At a phone store, you can afford various "tiers" of phones based on how
 // much money you have.
 //    If you have at least $30 you can buy a prepaid phone.
